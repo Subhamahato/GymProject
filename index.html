@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="theme-color" content="#e63946">
+    
+    <title>Desi Fitness Jsr | Professional Fitness Gym</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/icon-circle.png">
+    <link rel="apple-touch-icon" href="assets/icon-circle.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="theme-switch" onclick="toggleTheme()" id="theme-btn">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <div id="offline-toast" class="toast">Offline Mode Active</div>
+
+    <div id="loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <h1 class="logo-text">DESI<span>FITNESS</span>JSR</h1>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <main id="app-content" style="display: none;">
+
+        <section id="home" class="page active">
+            <header class="hero-section" id="hero-dynamic">
+                <div class="hero-overlay">
+                    <h1>REDEFINE<br>YOUR LIMITS</h1>
+                    <p>Professional coaching for elite results.</p>
+                    <button class="btn-primary" onclick="showPage('plans', document.querySelector('[onclick*=\'plans\']'))">GET STARTED</button>
+                </div>
+            </header>
+            
+            <div class="container">
+                <div class="stats-row">
+                    <div class="stat-card"><strong>500+</strong><span>Members</span></div>
+                    <div class="stat-card"><strong>15+</strong><span>Trainers</span></div>
+                    <div class="stat-card"><strong>24/7</strong><span>Access</span></div>
+                </div>
+
+                <div class="motivation-box">
+                    <h3><i class="fas fa-bolt"></i> Today's Motivation</h3>
+                    <p id="quote-text"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="trainer" class="page">
+            <div class="container">
+                <h2 class="page-title">Meet Your Coach</h2>
+                
+                <div class="trainer-profile">
+                    
+                    <div class="trainer-image-container">
+                        <div class="coach-bg"></div>
+                        <img src="assets/coach-transparent.png" alt="Head Coach" class="trainer-img">
+                        <div class="experience-badge">10+ Yrs Exp</div>
+                    </div>
+                    
+                    <div class="trainer-bio">
+                        <h3>Coach Nishith Mahato</h3>
+                        <p class="subtitle">Certified Strength & Conditioning Specialist</p>
+                        <p>I help busy professionals reclaim their health through science-based training and sustainable nutrition.</p>
+                    </div>
+
+                    <div class="specialties-grid">
+                        <div class="spec-item"><i class="fas fa-dumbbell"></i> Weightlifting</div>
+                        <div class="spec-item"><i class="fas fa-apple-whole"></i> Nutrition</div>
+                        <div class="spec-item"><i class="fas fa-person-running"></i> Mobility</div>
+                        <div class="spec-item"><i class="fas fa-chart-line"></i> Fat Loss</div>
+                    </div>
+
+                    <h3 class="section-subtitle">Common Questions</h3>
+                    <div class="faq-container">
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <div class="faq-question"><span>Can I bring a guest?</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><p>Pro members get 2 guest passes per month!</p></div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <div class="faq-question"><span>Is there parking?</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><p>Yes, we offer 2 hours of free validated parking.</p></div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <div class="faq-question"><span>Can I bring a guest?</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><p>Pro members get 2 guest passes per month!</p></div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <div class="faq-question"><span>Is there parking?</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><p>Yes, we offer 2 hours of free validated parking.</p></div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <div class="faq-question"><span>Can I bring a guest?</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><p>Pro members get 2 guest passes per month!</p></div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <div class="faq-question"><span>Is there parking?</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><p>Yes, we offer 2 hours of free validated parking.</p></div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <div class="faq-question"><span>Can I bring a guest?</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><p>Pro members get 2 guest passes per month!</p></div>
+                        </div>
+                        <div class="faq-item" onclick="toggleFAQ(this)">
+                            <div class="faq-question"><span>Is there parking?</span><i class="fas fa-chevron-down"></i></div>
+                            <div class="faq-answer"><p>Yes, we offer 2 hours of free validated parking.</p></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="classes" class="page">
+            <div class="container">
+                <h2 class="page-title">Class Schedule</h2>
+                <div class="filter-bar">
+                    <span class="chip active" onclick="filterClasses('All')">All</span>
+                    <span class="chip" onclick="filterClasses('Strength')">Strength</span>
+                    <span class="chip" onclick="filterClasses('Cardio')">Cardio</span>
+                    <span class="chip" onclick="filterClasses('Recovery')">Recovery</span>
+                </div>
+
+                <div id="schedule-list" class="schedule-list">
+                    </div>
+            </div>
+        </section>
+
+        <section id="plans" class="page">
+            <div class="container">
+                <h2 class="page-title">Memberships</h2>
+                
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <div class="price">₹500<span>/mo</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Standard Gym Access</li>
+                        <li><i class="fas fa-check"></i> Locker Room & Showers</li>
+                    </ul>
+                    <button class="btn-outline" style="background: none; color: var(--primary); border: 2px solid var(--primary);">Select Plan</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="popular-tag">BEST VALUE</div>
+                    <h3>Pro Athlete</h3>
+                    <div class="price">₹1000<span>/3mo</span></div>
+                    <ul>
+                        <li><i class="fas fa-check"></i> 24/7 Priority Access</li>
+                        <li><i class="fas fa-check"></i> Custom Diet Plan</li>
+                        <li><i class="fas fa-check"></i> Sauna & Recovery Zone</li>
+                    </ul>
+                    <button class="btn-primary">Join Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page">
+            <div class="container">
+                <h2 class="page-title">Contact Us</h2>
+                <div class="glass-card">
+                    <a href="tel:+1234567890" class="contact-row">
+                        <i class="fas fa-phone"></i>
+                        <div><label>Phone</label><span>+1 (234) 567-890</span></div>
+                    </a>
+                    <a href="mailto:info@ironpulse.com" class="contact-row">
+                        <i class="fas fa-envelope"></i>
+                        <div><label>Email</label><span>info@ironpulse.com</span></div>
+                    </a>
+                    <div class="contact-row">
+                        <i class="fas fa-location-dot"></i>
+                        <div><label>Location</label><span>123 Gym St, New York</span></div>
+                    </div>
+                </div>
+
+                <div class="social-links-grid">
+                    <a href="#" class="social-circle insta"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-circle whats"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-circle fb"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-circle yt"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <nav class="bottom-nav">
+        <button class="nav-item active" onclick="showPage('home', this)">
+            <i class="fas fa-house nav-icon"></i><span>Home</span>
+        </button>
+        
+        <button class="nav-item" onclick="showPage('classes', this)">
+            <i class="fas fa-calendar-days nav-icon"></i><span>Classes</span>
+        </button>
+        
+        <button class="nav-item" onclick="showPage('plans', this)">
+            <i class="fas fa-credit-card nav-icon"></i><span>Plans</span>
+        </button>
+        
+        <button class="nav-item" onclick="showPage('trainer', this)">
+            <i class="fas fa-user-tie nav-icon"></i><span>Coach</span>
+        </button>
+        
+        <button class="nav-item" onclick="showPage('contact', this)">
+            <i class="fas fa-comment nav-icon"></i><span>Contact</span>
+        </button>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
