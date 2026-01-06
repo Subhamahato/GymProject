@@ -1,0 +1,60 @@
+{
+  "gymClasses": [
+    {
+      "name": "Early Bird CrossFit",
+      "coach": "Alex Rivera",
+      "time": "06:00 AM",
+      "type": "Strength",
+      "description": "High-intensity functional movements to start your day."
+    },
+    {
+      "name": "Power Hour Lifting",
+      "coach": "Sarah Chen",
+      "time": "08:30 AM",
+      "type": "Strength",
+      "description": "Focus on compound lifts: Squats, Deadlifts, and Bench Press."
+    },
+    {
+      "name": "HIIT & Burn",
+      "coach": "Mike Johnson",
+      "time": "10:00 AM",
+      "type": "Cardio",
+      "description": "Short bursts of intense exercise followed by brief recovery periods."
+    },
+    {
+      "name": "Endurance Cycling",
+      "coach": "Elena Rodriguez",
+      "time": "12:00 PM",
+      "type": "Cardio",
+      "description": "Indoor cycling designed to build cardiovascular stamina."
+    },
+    {
+      "name": "Mobility & Flow",
+      "coach": "David Smith",
+      "time": "04:30 PM",
+      "type": "Recovery",
+      "description": "Improve flexibility and joint health through guided movement."
+    },
+    {
+      "name": "Sunset Yoga",
+      "coach": "Aria Moon",
+      "time": "06:00 PM",
+      "type": "Recovery",
+      "description": "Relaxing Vinyasa flow to decompress after work."
+    },
+    {
+      "name": "Boxing Basics",
+      "coach": "Marcus Vane",
+      "time": "07:30 PM",
+      "type": "Cardio",
+      "description": "Learn striking techniques while getting a full-body workout."
+    },
+    {
+      "name": "Night Owl Calisthenics",
+      "coach": "Jordan Lee",
+      "time": "09:00 PM",
+      "type": "Strength",
+      "description": "Bodyweight strength training for late-night grinders."
+    }
+  ]
+}
